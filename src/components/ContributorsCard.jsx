@@ -1,7 +1,5 @@
 export const ContributorsCard = ({ login, avatar_url, html_url, contributions }) => {
 
-
-
     return (
         <div className="card mb-3" style={{ maxWidth: '540px' }}>
             <div className="row g-0">

@@ -1,17 +1,12 @@
 import { useState } from "react"
-import { Form } from "./Form"
-import { GetSearchData } from "./GetSearchData"
+import { Form, GetSearchData } from "./"
+
 
 export const MainPage = () => {
 
-
-  // const { data } = useFetch(searchText)
   const [search, setSearch] = useState([])
 
-  const onNewSearch = (newSearch) => {
-    setSearch(newSearch)
-  }
-
+  const onNewSearch = (newSearch) => setSearch(newSearch)
 
   return (
     <>

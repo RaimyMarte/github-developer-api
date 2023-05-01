@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useFetch } from "../hooks"
-import { Loading } from "./Loading"
-import { ContributorsCard } from "./ContributorsCard"
+import { Loading, ContributorsCard } from "./"
 import { useState } from "react"
 
 export const Contributors = () => {

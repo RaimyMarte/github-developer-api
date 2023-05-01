@@ -1,6 +1,5 @@
 import { useFetch } from "../hooks"
-import { RepositoryCard } from "./RepositoryCard"
-import { Loading } from "./Loading"
+import { RepositoryCard, Loading } from "./"
 
 export const GetSearchData = ({ searchText }) => {
 
