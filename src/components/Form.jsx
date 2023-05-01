@@ -14,25 +14,30 @@ export const Form = ({ onNewSearch }) => {
 
     return (
         <div className="container">
-            <form
-                onSubmit={onSearchSubmit}
-                className="container"
-            >
-                <input
-                    type="text"
-                    className="form-control form-control-lg"
-                    placeholder="searchText"
-                    name="searchText"
-                    value={searchText}
-                    onInput={onInputChange}
-                />
-                <button
-                    type="submit"
-                    className="btn btn-primary"
-                >
-                    Search
-                </button>
-            </form>
+            <div className="row justify-content-center mt-5">
+                <div className="col-md-8 col-10">
+                    <form
+                        onSubmit={onSearchSubmit}
+                    >
+                        <input
+                            type="text"
+                            className="form-control "
+                            placeholder="Search GitHub"
+                            name="searchText"
+                            value={searchText}
+                            onInput={onInputChange}
+                        />
+                        <div className="text-center">
+                            <button
+                                type="submit"
+                                className="btn btn-primary mt-2 justify-self-center"
+                            >
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     )
 }

@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Form, GetSearchData } from "./"
 
-
 export const MainPage = () => {
 
   const [search, setSearch] = useState([])
