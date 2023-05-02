@@ -14,28 +14,35 @@ export const Contributors = () => {
         setUserCount(prevCount => prevCount + 5);
     };
 
-
     return (
-        <>
-            <h1>Top Contributors</h1>
-            {
-                isLoading
-                    ? <Loading />
+        <div className="container mt-3">
+            <h1 className="text-center mb-3">Top Contributors</h1>
+            <div className="row justify-content-center gap-3 mb-3 gx-0">
+                {
+                    isLoading
+                        ? <Loading />
+                        :
+                        <>
+                            {data.slice(0, userCount).map(user => (
+                                <ContributorsCard
+                                    key={user.id}
+                                    {...user}
+                                />
+                            ))}
+                            {userCount < data.length && (
+                                <div className="text-center">
+                                    <button
+                                        className="btn btn-primary"
+                                        onClick={handleViewMore}
+                                    >
+                                        View More
+                                    </button>
+                                </div>
+                            )}
+                        </>
+                }
+            </div>
+        </div>
 
-                    :
-                    data.slice(0, userCount).map(user => (
-                        <ContributorsCard
-                            key={user.id}
-                            {...user}
-                        />
-                    ))
-            }
-            <button
-                className="btn btn-primary"
-                onClick={handleViewMore}
-            >
-                View More
-            </button>
-        </>
     )
 }

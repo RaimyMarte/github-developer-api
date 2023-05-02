@@ -13,13 +13,21 @@ export const GetSearchData = ({ searchText }) => {
         isLoading
           ? <Loading />
 
-          : items.map(item => (
-            <RepositoryCard
-              key={item.id}
+          :
+          <div className="container">
+            <div className="row justify-content-center gap-4 mb-3">
+              {
+                items.map(item => (
+                  <RepositoryCard
+                    key={item.id}
 
-              {...item}
-            />
-          ))
+                    {...item}
+                  />
+                ))
+              }
+            </div>
+          </div>
+
       }
 
     </>

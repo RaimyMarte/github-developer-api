@@ -9,11 +9,13 @@ export const MainPage = () => {
 
   return (
     <>
+    <h1 className="text-center">GitHub API</h1>
       <Form onNewSearch={onNewSearch} />
 
       {
         search.length > 0 && (<GetSearchData searchText={search} />)
       }
+
 
     </>
 
